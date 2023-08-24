@@ -34,3 +34,9 @@ There are two optional scripts available:
 
 - `npm run test:ui` to run the tests in UI mode
 - `npm run test:debug` to run the tests in debug mode
+
+## Running tests in GitHub Actions
+
+The project contains a GitHub Actions workflow that runs the tests in a GitHub-hosted runner. The workflow is configured to run on a schedule, or you can manually trigger it.
+
+You can find the workflow in the `.github/workflows` folder.
