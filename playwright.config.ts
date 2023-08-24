@@ -12,7 +12,10 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   timeout: 60000,
-  reporter: "html",
+  reporter: [
+    ["html"],
+    ["@estruyf/github-actions-reporter", { showError: true }],
+  ],
   use: {
     trace: "on-first-retry",
   },
