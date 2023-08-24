@@ -2,6 +2,8 @@
 
 This repository can be used as a template to get started with [Playwright](https://playwright.dev/) to test Microsoft 365 solutions.
 
+> More information can be found in the blog post [End-to-End Test Microsoft 365 Solutions with Playwright](https://www.eliostruyf.com/test-microsoft-365-solutions-playwright/).
+
 ## Installation
 
 - Clone this repository or use it as a template
