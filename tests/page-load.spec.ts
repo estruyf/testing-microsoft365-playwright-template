@@ -1,6 +1,6 @@
 import { test, expect, Page } from "@playwright/test";
 
-test.describe("Navigation", () => {
+test.describe("Page load", () => {
   let page: Page;
 
   test.beforeAll(async ({ browser }) => {
@@ -14,10 +14,10 @@ test.describe("Navigation", () => {
     await page.close();
   });
 
-  test("Check global navigation", async () => {
+  test("Check site header title", async () => {
     const header = page.locator("[data-automationid='SiteHeaderTitle'] a");
     await header.waitFor();
 
-    expect(header).toHaveText("Communication site");
+    await expect(header).toHaveText("Communication site");
   });
 });
