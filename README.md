@@ -20,6 +20,10 @@ PASSWORD=
 
 ## Run the tests
 
+In the `tests` folder, you can find a sample test that navigates to SharePoint and verifies the Site Title. You can start from there or create your own tests.
+
+> **Important**: the `login.setup.ts` file contains the code to login to Microsoft 365. It is configured to run before all tests in the `playwright.config.ts` file.
+
 To run the tests, execute the following command:
 
 ```bash
