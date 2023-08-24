@@ -6,9 +6,14 @@
   "scripts": {
     "test": "NODE_ENV=development npx playwright test",
     "test:ui": "NODE_ENV=development npx playwright test --ui",
-    "debug": "NODE_ENV=development npx playwright test --debug"
+    "test:debug": "NODE_ENV=development npx playwright test --debug"
   },
-  "keywords": [],
+  "keywords": [
+    "testing",
+    "microsoft365",
+    "playwright",
+    "e2e"
+  ],
   "author": "Elio Struyf <elio@struyfconsulting.be>",
   "license": "MIT",
   "dependencies": {

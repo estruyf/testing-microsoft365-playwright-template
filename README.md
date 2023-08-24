@@ -4,14 +4,29 @@ This repository can be used as a template to get started with [Playwright](https
 
 ## Installation
 
-- Clone this repository
+- Clone this repository or use it as a template
+- Run `npm install` to install the dependencies
+- Run `npx playwright install` to install the browsers
 
-## Usage
+## Configuration
 
-- Create an `.env` file in the root of the project with the following content:
+To get started, you need to configure the following environment variables:
 
 ```bash
 PAGE_URL=
 USERNAME=
 PASSWORD=
 ```
+
+## Run the tests
+
+To run the tests, execute the following command:
+
+```bash
+npm test
+```
+
+There are two optional scripts available:
+
+- `npm run test:ui` to run the tests in UI mode
+- `npm run test:debug` to run the tests in debug mode
