@@ -13,9 +13,9 @@ This repository can be used as a template to get started with [Playwright](https
 To get started, you need to configure the following environment variables:
 
 ```bash
-PAGE_URL=
-USERNAME=
-PASSWORD=
+M365_PAGE_URL=
+M365_USERNAME=
+M365_PASSWORD=
 ```
 
 ## Run the tests

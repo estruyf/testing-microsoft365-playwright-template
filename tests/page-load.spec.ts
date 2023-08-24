@@ -5,7 +5,7 @@ test.describe("Page load", () => {
 
   test.beforeAll(async ({ browser }) => {
     page = await browser.newPage();
-    await page.goto(process.env.PAGE_URL || "", {
+    await page.goto(process.env.M365_PAGE_URL || "", {
       waitUntil: "domcontentloaded",
     });
   });
