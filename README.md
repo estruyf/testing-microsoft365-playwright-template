@@ -40,3 +40,14 @@ There are two optional scripts available:
 The project contains a GitHub Actions workflow that runs the tests in a GitHub-hosted runner. The workflow is configured to run on a schedule, or you can manually trigger it.
 
 You can find the workflow in the `.github/workflows` folder.
+
+To use the workflow, you need to configure the following secrets and variables in your repository:
+
+### Variables
+
+- `PAGE_URL`
+
+### Secrets
+
+- `USERNAME`
+- `PASSWORD`
