@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=development npx playwright test",
-    "test:ui": "NODE_ENV=development npx playwright test --ui",
-    "test:debug": "NODE_ENV=development npx playwright test --debug"
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "test:debug": "npx playwright test --debug"
   },
   "keywords": [
     "testing",
