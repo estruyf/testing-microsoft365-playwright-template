@@ -17,7 +17,7 @@
   "author": "Elio Struyf <elio@struyfconsulting.be>",
   "license": "MIT",
   "dependencies": {
-    "@estruyf/github-actions-reporter": "^1.1.0",
+    "@estruyf/github-actions-reporter": "^1.2.0",
     "@playwright/test": "^1.37.1",
     "dotenv": "^16.3.1"
   }
