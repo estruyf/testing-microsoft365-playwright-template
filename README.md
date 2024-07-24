@@ -18,13 +18,45 @@ To get started, you need to configure the following environment variables:
 M365_PAGE_URL=
 M365_USERNAME=
 M365_PASSWORD=
+
+# When using the MFA login flow
+M365_OTP_SECRET=
 ```
+
+### MFA login flow
+
+If your account needs to use MFA to login, you will have to do the following:
+
+- Go to the [Security info](https://mysignins.microsoft.com/security-info) page of the account you want to use
+- Click on the **Add sign-in method** button
+- Select **Authenticator app** and click on **Add**
+- Click on the **I want to use a different authenticator app** link
+- Click on the **Next** button
+- Click on the **Can't scan image?** link
+- Copy the **Secret key** and paste it in the `M365_OTP_SECRET` environment variable
+- Use your authenticator app to scan the QR code
+- Click on the **Next** button
+- Enter the code from your authenticator app and click on the **Next** button
+
+> [!NOTE]
+> The secret key is only shown once. If you lose it, you will have to remove the authenticator app and add it again.
+
+If you do not want to use an authenticator app for creating the OTP, you can use the following command to generate the OTP:
+
+```bash
+npm run generate:otp -- <secret key>
+```
+
+![Generate OTP](./assets/generate-otp.png)
+
+> [!NOTE]
+> This command executes the [get-otp.mjs](./scripts/get-otp.mjs) script.
 
 ## Run the tests
 
 In the `tests` folder, you can find a sample test that navigates to SharePoint and verifies the Site Title. You can start from there or create your own tests.
 
-> **Important**: the `login.setup.ts` file contains the code to login to Microsoft 365. It is configured to run before all tests in the `playwright.config.ts` file.
+> **Important**: the `login.setup.ts` or `mfa.setup.ts` file contains the code to login to Microsoft 365. It is configured to run before all tests in the `playwright.config.ts` file.
 
 To run the tests, execute the following command:
 
@@ -47,9 +79,10 @@ To use the workflow, you need to configure the following secrets and variables i
 
 ### Variables
 
-- `PAGE_URL`
+- `M365_PAGE_URL`
 
 ### Secrets
 
-- `USERNAME`
-- `PASSWORD`
+- `M365_USERNAME`
+- `M365_PASSWORD`
+- `M365_OTP_SECRET` (only when using MFA)

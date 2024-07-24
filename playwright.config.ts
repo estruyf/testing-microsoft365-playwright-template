@@ -5,6 +5,8 @@ if (!process.env.CI) {
   require("dotenv").config({ path: ".env" });
 }
 
+const USE_MFA = process.env.M365_OTP_SECRET ? true : false;
+
 export default defineConfig({
   testDir: "tests",
   fullyParallel: true,
@@ -27,7 +29,7 @@ export default defineConfig({
   projects: [
     {
       name: "setup",
-      testMatch: /login\.setup.ts/,
+      testMatch: USE_MFA ? /mfa.setup.ts/ : /login.setup.ts/,
     },
     {
       name: "chromium",

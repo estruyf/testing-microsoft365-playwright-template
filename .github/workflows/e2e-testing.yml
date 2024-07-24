@@ -12,10 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -27,9 +28,10 @@ jobs:
         run: npx playwright test
         continue-on-error: true
         env:
-          PAGE_URL: ${{ vars.SP_DEV_PAGE_URL }}
-          USERNAME: ${{ secrets.SP_DEV_USERNAME }}
-          PASSWORD: ${{ secrets.SP_DEV_PASSWORD }}
+          M365_PAGE_URL: ${{ vars.M365_PAGE_URL }}
+          M365_USERNAME: ${{ secrets.M365_USERNAME }}
+          M365_PASSWORD: ${{ secrets.M365_PASSWORD }}
+          M365_OTP_SECRET: ${{ secrets.M365_OTP_SECRET }}
 
       - uses: actions/upload-artifact@v3
         if: always()
