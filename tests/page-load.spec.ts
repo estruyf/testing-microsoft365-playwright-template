@@ -16,8 +16,6 @@ test.describe("Page load", () => {
 
   test("Check site header title", async () => {
     const header = page.locator("[data-automationid='SiteHeaderTitle'] a");
-    await header.waitFor();
-
     await expect(header).toHaveText("Communication site");
   });
 });

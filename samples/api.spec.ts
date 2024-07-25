@@ -16,7 +16,6 @@ test.describe("API Testing", () => {
 
   test("API success - 200", async () => {
     const result = page.getByTestId("api-result");
-    await result.waitFor();
 
     await expect(result).toHaveText("Result: 200");
   });
@@ -29,7 +28,6 @@ test.describe("API Testing", () => {
     });
 
     const result = page.getByTestId("api-result");
-    await result.waitFor();
 
     await expect(result).toHaveText(
       "Result: 429 - Too Many Requests, 429 - Too Many Requests, 429 - Too Many Requests"
@@ -52,7 +50,6 @@ test.describe("API Testing", () => {
     });
 
     const result = page.getByTestId("api-result");
-    await result.waitFor();
 
     await expect(result).toHaveText(
       "Result: 429 - Too Many Requests, 429 - Too Many Requests, 200"
@@ -74,7 +71,6 @@ test.describe("API Testing", () => {
   //   });
 
   //   const result = page.getByTestId("api-result");
-  //   await result.waitFor();
 
   //   expect((await result.textContent())?.endsWith(`200`)).toBeTruthy();
   // });
@@ -87,7 +83,6 @@ test.describe("API Testing", () => {
     });
 
     const result = page.getByTestId("api-result");
-    await result.waitFor();
 
     await expect(result).toHaveText("Result: 500 - Internal Server Error");
   });
@@ -104,7 +99,6 @@ test.describe("API Testing", () => {
   //   });
 
   //   const result = page.getByTestId("api-result");
-  //   await result.waitFor();
 
   //   await expect(result).toHaveText("Result: 200 - Unexpected response body");
   // });
