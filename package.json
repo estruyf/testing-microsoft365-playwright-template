@@ -19,9 +19,10 @@
   "license": "MIT",
   "dependencies": {
     "@estruyf/github-actions-reporter": "^1.8.0",
-    "@playwright/test": "^1.45.3",
+    "@playwright/test": "^1.48.2",
     "dotenv": "^16.3.1",
-    "otpauth": "^9.3.1"
+    "otpauth": "^9.3.1",
+    "playwright-m365-helpers": "^0.0.2"
   },
   "devDependencies": {
     "@types/node": "^20.14.12"
