@@ -9,7 +9,7 @@ const USE_MFA = process.env.M365_OTP_SECRET ? true : false;
 
 export default defineConfig({
   testDir: "tests",
-  fullyParallel: true,
+  fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,

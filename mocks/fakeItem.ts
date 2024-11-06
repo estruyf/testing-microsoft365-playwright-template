@@ -1,0 +1,56 @@
+export const fakeItem = (
+  id: number,
+  title: string,
+  description: string,
+  image: string,
+  price: number,
+  total: number
+) => ({
+  "@odata.etag": '"1"',
+  ItemInternalId: `${id}`,
+  ID: id,
+  Title: title,
+  Price: price,
+  Description: description,
+  Image: image,
+  Total: total,
+  Modified: new Date().toISOString(),
+  Created: new Date().toISOString(),
+  Author: {
+    "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+    Claims: "",
+    DisplayName: "Elio Struyf",
+    Email: "admin@tenant.onmicrosoft.com",
+    Picture:
+      "https://tenant.sharepoint.com/sites/Playwright/_layouts/15/UserPhoto.aspx?Size=L&AccountName=admin@tenant.onmicrosoft.com",
+    Department: null,
+    JobTitle: null,
+  },
+  "Author#Claims": "",
+  Editor: {
+    "@odata.type": "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+    Claims: "",
+    DisplayName: "Elio Struyf",
+    Email: "admin@tenant.onmicrosoft.com",
+    Picture:
+      "https://tenant.sharepoint.com/sites/Playwright/_layouts/15/UserPhoto.aspx?Size=L&AccountName=admin@tenant.onmicrosoft.com",
+    Department: null,
+    JobTitle: null,
+  },
+  "Editor#Claims": "",
+  "{Identifier}": "Lists%252fInventory%252f22_.000",
+  "{IsFolder}": false,
+  "{Thumbnail}": {
+    Large: null,
+    Medium: null,
+    Small: null,
+  },
+  "{Link}":
+    "https://tenant.sharepoint.com/sites/Playwright/_layouts/15/listform.aspx?PageType=4&ListId=77762a86%2D8a1f%2D4706%2D920a%2D38c96b402ecd&ID=22&ContentTypeID=0x010003ABE40E711DE04AA2D44A4ECFF15D2C00DDEB921F1A702840BA6293117AA32EE2",
+  "{Name}": "test",
+  "{FilenameWithExtension}": "test",
+  "{Path}": "Lists/Inventory/",
+  "{FullPath}": "Lists/Inventory/22_.000",
+  "{HasAttachments}": false,
+  "{VersionNumber}": "1.0",
+});
